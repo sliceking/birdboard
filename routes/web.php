@@ -17,6 +17,4 @@ Route::get('/', function () {
 
 Route::get('/projects', 'ProjectsController@index');
 
-Route::post('/projects', function () {
-  App\Project::create(request(['title', 'description']));
-});
+Route::post('/projects', 'ProjectsController@store');
